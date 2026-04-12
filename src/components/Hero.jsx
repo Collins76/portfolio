@@ -9,7 +9,7 @@ export default function Hero() {
       <ParticleGrid />
 
       {/* Radial gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0F172A]/50 to-[#0F172A] pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0B1120]/50 to-[#0B1120] pointer-events-none z-[1]" />
 
       <div className="relative z-10 text-center px-6 max-w-4xl">
         <motion.p
