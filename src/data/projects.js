@@ -21,7 +21,7 @@ export const projects = [
     description: 'Real-time GIS team performance dashboard tracking operational KPIs, task completion rates, and field productivity metrics with 253+ commits of active development.',
     tech: ['Next.js', 'Firebase', 'TypeScript', 'Tailwind CSS', 'Recharts'],
     github: 'https://github.com/Collins76/GIS-KPIs-Dashboard',
-    live: null,
+    live: 'https://github.com/Collins76/GIS-KPIs-Dashboard',
     features: [
       'Real-time KPI monitoring',
       'Team performance analytics',
@@ -69,7 +69,7 @@ export const projects = [
     description: 'Single-file vanilla JS dashboard built from a 1,600+ record pole survey dataset for the Shomolu Business Unit, featuring interactive maps and analytics.',
     tech: ['JavaScript', 'Chart.js', 'Leaflet.js', 'HTML/CSS'],
     github: 'https://github.com/Collins76/IDB-2.0-Assets-Tracking-Dashboard-V2',
-    live: null,
+    live: 'https://github.com/Collins76/IDB-2.0-Assets-Tracking-Dashboard-V2',
     features: [
       'Interactive Leaflet.js geospatial mapping',
       '1,600+ pole survey records',
@@ -85,7 +85,7 @@ export const projects = [
     description: 'Interactive macroeconomic dashboard displaying 24+ indicators including GDP, inflation, FX rates, oil production, stock market data, and correlation analysis.',
     tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Recharts'],
     github: 'https://github.com/Collins76/Nigeria-Economic-Dashboard',
-    live: null,
+    live: 'https://github.com/Collins76/Nigeria-Economic-Dashboard',
     features: [
       '24+ macroeconomic indicators',
       'Correlation analysis and heatmaps',
@@ -117,7 +117,7 @@ export const projects = [
     description: 'Operational Power BI dashboard tracking distribution transformer vandalization incidents with geographic mapping, status tracking, and temporal trend analysis.',
     tech: ['Power BI', 'QGIS', 'Excel', 'DAX'],
     github: 'https://github.com/Collins76/Power-BI-Dashboard-for-Tracking-DT-Vandalization',
-    live: null,
+    live: 'https://github.com/Collins76/Power-BI-Dashboard-for-Tracking-DT-Vandalization',
     features: [
       'Geographic incident mapping',
       'Status tracking and resolution rates',
@@ -132,7 +132,7 @@ export const projects = [
     description: 'Power BI dashboard monitoring 8,513+ upriser field inspections across Lagos with geographic mapping, field officer performance tracking, and business unit comparisons.',
     tech: ['Power BI', 'CSV', 'DAX', 'Geographic Mapping'],
     github: 'https://github.com/Collins76/DT-Uprisers-Feeder-Pillars-Power-BI-Project',
-    live: null,
+    live: 'https://github.com/Collins76/DT-Uprisers-Feeder-Pillars-Power-BI-Project',
     features: [
       '8,513+ upriser inspections tracked',
       'Field officer performance metrics',
@@ -147,7 +147,7 @@ export const projects = [
     description: 'Nigerian health data analysis project with Jupyter notebooks, technical reports, policy recommendations, and implementation roadmaps combining data science with actionable insights.',
     tech: ['Python', 'Jupyter', 'Pandas', 'Matplotlib', 'Seaborn'],
     github: 'https://github.com/Collins76/Heath_Data_Insights_Analyses',
-    live: null,
+    live: 'https://github.com/Collins76/Heath_Data_Insights_Analyses',
     features: [
       'Exploratory data analysis of Nigerian health data',
       'Statistical modeling and visualization',
