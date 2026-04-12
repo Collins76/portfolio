@@ -10,7 +10,9 @@ function Mockup({ type, color }) {
   const bg = '#0c1220'
   const panelBg = '#162033'
   return (
-    <svg viewBox="0 0 400 220" className="w-full rounded-t-xl" style={{ background: bg }}>
+    <svg viewBox="0 0 400 220" className="w-full rounded-t-xl">
+      {/* Full background fill */}
+      <rect x="0" y="0" width="400" height="220" fill={bg} />
       {/* Top bar */}
       <rect x="0" y="0" width="400" height="28" fill={panelBg} />
       <circle cx="14" cy="14" r="4" fill="#EF4444" opacity="0.8" />
