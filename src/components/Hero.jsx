@@ -9,7 +9,7 @@ export default function Hero() {
       <ParticleGrid />
 
       {/* Radial gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0E1A]/50 to-[#0A0E1A] pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0F172A]/50 to-[#0F172A] pointer-events-none z-[1]" />
 
       <div className="relative z-10 text-center px-6 max-w-4xl">
         <motion.p
@@ -72,7 +72,7 @@ export default function Hero() {
               transition-all hover:-translate-y-0.5">
             View Projects
           </a>
-          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer"
+          <a href="/cv2.pdf" target="_blank" rel="noopener noreferrer"
             className="px-8 py-3 rounded-xl border border-white/20 text-slate-200
               hover:bg-white/5 hover:border-cyan-500/40 transition-all hover:-translate-y-0.5">
             Download CV

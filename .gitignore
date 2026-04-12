@@ -5,3 +5,5 @@ dist_old
 .env
 .env.local
 *.local
+
+.vercel

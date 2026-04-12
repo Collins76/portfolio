@@ -5,7 +5,7 @@ import { experience } from '../data/experience'
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 px-6 bg-gradient-to-b from-[#0F172A] to-[#0A0E1A]">
+    <section id="experience" className="py-24 px-6 bg-gradient-to-b from-[#131D33] to-[#0F172A]">
       <div className="max-w-4xl mx-auto">
         <SectionHeading title="Professional Experience" subtitle="19+ years across utility, oil & gas, and technology sectors" />
 
@@ -35,7 +35,7 @@ export default function Experience() {
             >
               {/* Dot */}
               <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-3 h-3 rounded-full
-                bg-cyan-400 border-4 border-[#0A0E1A] z-10 mt-2" />
+                bg-cyan-400 border-4 border-[#0F172A] z-10 mt-2" />
 
               {/* Spacer for mobile */}
               <div className="w-12 md:hidden shrink-0" />

@@ -7,7 +7,7 @@ const iconMap = { Globe, Code2, Database, Cloud, BarChart3 }
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 bg-gradient-to-b from-[#0A0E1A] to-[#0F172A]">
+    <section id="skills" className="py-24 px-6 bg-gradient-to-b from-[#0F172A] to-[#131D33]">
       <div className="max-w-6xl mx-auto">
         <SectionHeading title="Core Skills" subtitle="Technologies and tools I work with every day" />
 

@@ -28,7 +28,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
         ${scrolled
-          ? 'bg-[#0A0E1A]/80 backdrop-blur-lg border-b border-white/5 shadow-lg shadow-black/20'
+          ? 'bg-[#0F172A]/80 backdrop-blur-lg border-b border-white/5 shadow-lg shadow-black/20'
           : 'bg-transparent'}`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -45,7 +45,7 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer"
+          <a href="/cv2.pdf" target="_blank" rel="noopener noreferrer"
             className="text-sm px-4 py-2 rounded-lg border border-cyan-500/40
               text-cyan-400 hover:bg-cyan-500/10 transition-all">
             Resume
@@ -65,7 +65,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#0A0E1A]/95 backdrop-blur-lg border-b border-white/5"
+            className="md:hidden bg-[#0F172A]/95 backdrop-blur-lg border-b border-white/5"
           >
             <div className="px-6 py-4 flex flex-col gap-4">
               {links.map(l => (
@@ -74,7 +74,7 @@ export default function Navbar() {
                   {l.label}
                 </a>
               ))}
-              <a href="/cv.pdf" target="_blank" rel="noopener noreferrer"
+              <a href="/cv2.pdf" target="_blank" rel="noopener noreferrer"
                 className="text-cyan-400 border border-cyan-500/40 rounded-lg px-4 py-2 text-center
                   hover:bg-cyan-500/10 transition-all">
                 Resume
