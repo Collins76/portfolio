@@ -40,7 +40,7 @@ export default function Education() {
         <h3 className="text-xl font-semibold text-slate-200 font-['Space_Grotesk'] mb-6 text-center">
           Certifications
         </h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
           {certifications.map((cert, i) => (
             <motion.div
               key={cert.title}

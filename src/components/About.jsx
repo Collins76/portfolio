@@ -29,7 +29,7 @@ export default function About() {
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
@@ -37,10 +37,10 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="text-center p-6 rounded-2xl border border-white/5 bg-white/[0.02]
+              className="text-center p-4 sm:p-6 rounded-2xl border border-white/5 bg-white/[0.02]
                 hover:border-cyan-500/30 hover:bg-cyan-500/5 transition-all group"
             >
-              <div className="text-3xl md:text-4xl font-bold font-['Space_Grotesk']
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold font-['Space_Grotesk']
                 bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent mb-2">
                 <AnimatedCounter target={s.value} suffix={s.suffix} />
               </div>

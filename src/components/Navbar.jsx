@@ -3,15 +3,15 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
 const links = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Education', href: '#education' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About', href: '#about', id: 'about' },
+  { label: 'Skills', href: '#skills', id: 'skills' },
+  { label: 'Projects', href: '#projects', id: 'projects' },
+  { label: 'Experience', href: '#experience', id: 'experience' },
+  { label: 'Education', href: '#education', id: 'education' },
+  { label: 'Contact', href: '#contact', id: 'contact' },
 ]
 
-export default function Navbar() {
+export default function Navbar({ activeSection = '' }) {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
@@ -20,6 +20,15 @@ export default function Navbar() {
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  function handleClick(e, href) {
+    e.preventDefault()
+    const el = document.querySelector(href)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+    setOpen(false)
+  }
 
   return (
     <motion.nav
@@ -31,18 +40,28 @@ export default function Navbar() {
           ? 'bg-[#09090b]/80 backdrop-blur-lg border-b border-white/5 shadow-lg shadow-black/20'
           : 'bg-transparent'}`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold font-['Space_Grotesk']
-          bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+        <a href="#" onClick={e => handleClick(e, '#hero')}
+          className="text-xl font-bold font-['Space_Grotesk']
+            bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
           CA
         </a>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {links.map(l => (
             <a key={l.href} href={l.href}
-              className="text-sm text-slate-400 hover:text-cyan-400 transition-colors">
+              onClick={e => handleClick(e, l.href)}
+              className={`relative text-sm transition-colors py-1
+                ${activeSection === l.id ? 'text-cyan-400' : 'text-slate-400 hover:text-cyan-400'}`}>
               {l.label}
+              {activeSection === l.id && (
+                <motion.div
+                  layoutId="navIndicator"
+                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-cyan-400 rounded-full"
+                  transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                />
+              )}
             </a>
           ))}
           <a href="/cv2.pdf" target="_blank" rel="noopener noreferrer"
@@ -53,7 +72,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile toggle */}
-        <button onClick={() => setOpen(!open)} className="md:hidden text-slate-300">
+        <button onClick={() => setOpen(!open)} className="md:hidden text-slate-300 p-1">
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -65,12 +84,15 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
             className="md:hidden bg-[#09090b]/95 backdrop-blur-lg border-b border-white/5"
           >
             <div className="px-6 py-4 flex flex-col gap-4">
               {links.map(l => (
-                <a key={l.href} href={l.href} onClick={() => setOpen(false)}
-                  className="text-slate-300 hover:text-cyan-400 transition-colors">
+                <a key={l.href} href={l.href}
+                  onClick={e => handleClick(e, l.href)}
+                  className={`transition-colors text-base
+                    ${activeSection === l.id ? 'text-cyan-400 font-medium' : 'text-slate-300 hover:text-cyan-400'}`}>
                   {l.label}
                 </a>
               ))}

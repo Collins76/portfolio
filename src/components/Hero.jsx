@@ -25,7 +25,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold font-['Space_Grotesk'] mb-6"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold font-['Space_Grotesk'] mb-6 px-2"
         >
           <span className="text-slate-100">Collins </span>
           <span className="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
@@ -37,7 +37,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
-          className="text-xl md:text-2xl text-slate-300 font-medium mb-4 h-10"
+          className="text-lg sm:text-xl md:text-2xl text-slate-300 font-medium mb-4 min-h-[2.5rem]"
         >
           <TypeWriter
             strings={[
@@ -55,7 +55,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="text-slate-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto"
+          className="text-slate-400 text-base sm:text-lg md:text-xl mb-8 sm:mb-10 max-w-2xl mx-auto px-2"
         >
           Turning spatial data into decisions that power millions.
         </motion.p>
@@ -64,21 +64,21 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2 }}
-          className="flex flex-wrap justify-center gap-4"
+          className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 sm:gap-4 px-4"
         >
           <a href="#projects"
-            className="px-8 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600
+            className="w-full sm:w-auto px-8 py-3 rounded-xl text-center bg-gradient-to-r from-cyan-500 to-blue-600
               text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/25
               transition-all hover:-translate-y-0.5">
             View Projects
           </a>
           <a href="/cv2.pdf" target="_blank" rel="noopener noreferrer"
-            className="px-8 py-3 rounded-xl border border-white/20 text-slate-200
+            className="w-full sm:w-auto px-8 py-3 rounded-xl text-center border border-white/20 text-slate-200
               hover:bg-white/5 hover:border-cyan-500/40 transition-all hover:-translate-y-0.5">
             Download CV
           </a>
           <a href="#contact"
-            className="px-8 py-3 rounded-xl border border-violet-500/40 text-violet-300
+            className="w-full sm:w-auto px-8 py-3 rounded-xl text-center border border-violet-500/40 text-violet-300
               hover:bg-violet-500/10 transition-all hover:-translate-y-0.5">
             Get in Touch
           </a>

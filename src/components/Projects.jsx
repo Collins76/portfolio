@@ -7,8 +7,8 @@ import { projects } from '../data/projects'
 
 /* ── Animated SVG Mockup ── */
 function Mockup({ type, color }) {
-  const bg = '#09090b'
-  const panelBg = '#1E293B'
+  const bg = '#0c1220'
+  const panelBg = '#162033'
   return (
     <svg viewBox="0 0 400 220" className="w-full rounded-t-xl" style={{ background: bg }}>
       {/* Top bar */}
@@ -32,7 +32,7 @@ function Mockup({ type, color }) {
             <rect x={x + 8} y="48" width="30" height="8" rx="2" fill={color} opacity="0.8">
               <animate attributeName="width" values="10;30;10" dur={`${2.5 + i * 0.3}s`} repeatCount="indefinite" />
             </rect>
-            <rect x={x + 8} y="62" width="50" height="5" rx="2" fill="#334155" />
+            <rect x={x + 8} y="62" width="50" height="5" rx="2" fill="#2a3a52" />
           </g>
         ))}
         <rect x="80" y="88" width="190" height="120" rx="6" fill={panelBg} />
@@ -67,7 +67,7 @@ function Mockup({ type, color }) {
               <animate attributeName="width" values="15;40;15" dur={`${3 + i * 0.2}s`} repeatCount="indefinite" />
               <animate attributeName="opacity" values="0.5;1;0.5" dur={`${3 + i * 0.2}s`} repeatCount="indefinite" />
             </rect>
-            <rect x={x + 10} y="68" width="60" height="6" rx="2" fill="#334155" />
+            <rect x={x + 10} y="68" width="60" height="6" rx="2" fill="#2a3a52" />
             <rect x={x + 10} y="80" width="68" height="4" rx="2" fill={color} opacity="0.2">
               <animate attributeName="width" values="20;68;20" dur={`${4 + i * 0.3}s`} repeatCount="indefinite" />
             </rect>
@@ -123,7 +123,7 @@ function Mockup({ type, color }) {
             <rect x={x + 10} y="80" width="35" height="8" rx="2" fill={color} opacity="0.8">
               <animate attributeName="width" values="15;35;15" dur={`${2.5 + i * 0.4}s`} repeatCount="indefinite" />
             </rect>
-            <rect x={x + 10} y="94" width="55" height="5" rx="2" fill="#334155" />
+            <rect x={x + 10} y="94" width="55" height="5" rx="2" fill="#2a3a52" />
           </g>
         ))}
         <rect x="10" y="122" width="185" height="88" rx="6" fill={panelBg} />
@@ -188,7 +188,7 @@ function ProjectModal({ project, onClose }) {
         transition={{ type: 'spring', damping: 25, stiffness: 300 }}
         onClick={e => e.stopPropagation()}
         className="relative max-w-3xl w-full max-h-[90vh] overflow-y-auto
-          rounded-2xl border border-white/10 bg-[#09090b] p-0 shadow-2xl shadow-black/50"
+          rounded-2xl border border-white/10 bg-[#0c1220] p-0 shadow-2xl shadow-black/50"
       >
         <button onClick={onClose}
           className="absolute top-4 right-4 z-20 p-1.5 rounded-lg bg-black/40
@@ -308,7 +308,7 @@ export default function Projects() {
               className="group"
             >
               <div className="relative h-full flex flex-col rounded-2xl overflow-hidden
-                border border-white/[0.06] bg-[#09090b] hover:border-white/[0.12]
+                border border-white/[0.06] bg-[#0c1220] hover:border-white/[0.12]
                 shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/40 transition-all duration-300">
 
                 {/* Animated glow border on hover */}

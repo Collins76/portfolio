@@ -27,7 +27,7 @@ export default function Experience() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className={`relative flex gap-6 mb-12 ${
+              className={`relative flex gap-4 sm:gap-6 mb-8 sm:mb-12 ${
                 i % 2 === 0
                   ? 'md:flex-row md:text-right'
                   : 'md:flex-row-reverse md:text-left'
@@ -42,7 +42,7 @@ export default function Experience() {
 
               {/* Card */}
               <div className={`flex-1 md:w-[calc(50%-2rem)] ${i % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
-                <div className="p-5 rounded-2xl border border-white/5 bg-white/[0.02]
+                <div className="p-4 sm:p-5 rounded-2xl border border-white/5 bg-white/[0.02]
                   hover:border-cyan-500/20 transition-all">
                   <div className={`flex items-center gap-3 mb-3 ${
                     i % 2 === 0 ? 'md:justify-end' : ''

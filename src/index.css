@@ -13,11 +13,22 @@
 /* ── Smooth scrolling ── */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* ── Prevent horizontal overflow on mobile ── */
+body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+#root {
+  overflow-x: hidden;
 }
 
 /* ── Custom scrollbar ── */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
   background: #09090b;
@@ -42,4 +53,19 @@ html {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* ── Mobile-first section spacing ── */
+@media (max-width: 640px) {
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* ── Touch device optimizations ── */
+@media (hover: none) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
