@@ -20,7 +20,7 @@ html {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0B1120;
+  background: #09090b;
 }
 ::-webkit-scrollbar-thumb {
   background: #1E293B;

@@ -7,7 +7,7 @@ import { projects } from '../data/projects'
 
 /* ── Animated SVG Mockup ── */
 function Mockup({ type, color }) {
-  const bg = '#0B1120'
+  const bg = '#09090b'
   const panelBg = '#1E293B'
   return (
     <svg viewBox="0 0 400 220" className="w-full rounded-t-xl" style={{ background: bg }}>
@@ -188,7 +188,7 @@ function ProjectModal({ project, onClose }) {
         transition={{ type: 'spring', damping: 25, stiffness: 300 }}
         onClick={e => e.stopPropagation()}
         className="relative max-w-3xl w-full max-h-[90vh] overflow-y-auto
-          rounded-2xl border border-white/10 bg-[#0B1120] p-0 shadow-2xl shadow-black/50"
+          rounded-2xl border border-white/10 bg-[#09090b] p-0 shadow-2xl shadow-black/50"
       >
         <button onClick={onClose}
           className="absolute top-4 right-4 z-20 p-1.5 rounded-lg bg-black/40
@@ -308,7 +308,7 @@ export default function Projects() {
               className="group"
             >
               <div className="relative h-full flex flex-col rounded-2xl overflow-hidden
-                border border-white/[0.06] bg-[#0B1120] hover:border-white/[0.12]
+                border border-white/[0.06] bg-[#09090b] hover:border-white/[0.12]
                 shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/40 transition-all duration-300">
 
                 {/* Animated glow border on hover */}
