@@ -9,7 +9,7 @@ const socials = [
   { icon: Mail, label: 'Email', value: 'collins.tochi@gmail.com', href: 'mailto:collins.tochi@gmail.com' },
   { icon: Phone, label: 'Phone', value: '+234 806 217 2134', href: 'tel:+2348062172134' },
   { icon: MapPin, label: 'Location', value: 'Lagos, Nigeria', href: null },
-  { icon: FaLinkedinIn, label: 'LinkedIn', value: 'collinsanyanwu', href: 'https://www.linkedin.com/in/collinsanyanwu/' },
+  { icon: FaLinkedinIn, label: 'LinkedIn', value: 'linkedin.com/in/collinsanyanwu', href: 'https://www.linkedin.com/in/collinsanyanwu/' },
   { icon: SiGithub, label: 'GitHub', value: 'Collins76', href: 'https://github.com/Collins76' },
 ]
 
