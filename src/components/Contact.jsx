@@ -66,7 +66,8 @@ export default function Contact() {
             <button type="submit"
               className="flex items-center gap-2 px-8 py-3 rounded-xl bg-gradient-to-r
                 from-cyan-500 to-blue-600 text-white font-semibold hover:shadow-lg
-                hover:shadow-cyan-500/25 transition-all hover:-translate-y-0.5">
+                hover:shadow-cyan-500/25 transition-all hover:-translate-y-0.5
+                cursor-pointer relative z-10">
               <Send size={18} /> Send Message
             </button>
           </motion.form>
@@ -87,9 +88,11 @@ export default function Contact() {
                 transition={{ delay: i * 0.08 }}
               >
                 {s.href ? (
-                  <a href={s.href} target="_blank" rel="noopener noreferrer"
+                  <a href={s.href}
+                    {...(s.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                     className="flex items-center gap-4 p-4 rounded-xl border border-white/5
-                      bg-white/[0.02] hover:border-cyan-500/20 hover:bg-cyan-500/5 transition-all group">
+                      bg-white/[0.02] hover:border-cyan-500/20 hover:bg-cyan-500/5 transition-all
+                      group cursor-pointer relative z-10">
                     <div className="p-2.5 rounded-lg bg-cyan-500/10 group-hover:bg-cyan-500/20 transition-colors">
                       <s.icon size={20} className="text-cyan-400" />
                     </div>
