@@ -17,7 +17,7 @@ export default function Hero() {
       <ParticleGrid />
 
       {/* Radial gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#09090b]/50 to-[#09090b] pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#060A14]/40 to-[#060A14]/90 pointer-events-none z-[1]" />
 
       <div className="relative z-10 w-full max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-8 items-center">
 
@@ -141,7 +141,7 @@ export default function Hero() {
             {/* Headshot */}
             <img src="/collins.jpg" alt="Collins Anyanwu — Geospatial & AI Data Analyst"
               className="relative w-52 h-52 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-full object-cover
-                border-[6px] border-[#09090b] shadow-2xl shadow-black/50" />
+                border-[6px] border-[#060A14] shadow-2xl shadow-black/50" />
 
             {/* Floating stat badges */}
             {floatBadges.map(({ Icon, text, pos, delay, dur }) => (

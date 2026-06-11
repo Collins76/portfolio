@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
+import BackgroundFX from './components/BackgroundFX'
 import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
@@ -53,6 +54,7 @@ export default function App() {
 
   return (
     <>
+      <BackgroundFX />
       <Navbar activeSection={activeSection} />
       <main className="overflow-x-hidden">
         {sections.map(({ id, Component }) => (

@@ -24,7 +24,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 px-6 bg-gradient-to-b from-[#09090b] to-[#0f0f12]">
+    <section id="contact" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <SectionHeading title="Get in Touch" subtitle="Have a project in mind? Let's collaborate." />
 
