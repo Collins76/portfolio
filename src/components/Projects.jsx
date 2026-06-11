@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ExternalLink, X, Eye } from 'lucide-react'
+import { ExternalLink, X, Eye, Sparkles } from 'lucide-react'
 import { SiGithub } from 'react-icons/si'
 import SectionHeading from './ui/SectionHeading'
-import { projects } from '../data/projects'
+import { categories, projects } from '../data/projects'
 
 /* ── Animated SVG Mockup ── */
 function Mockup({ type, color }) {
@@ -142,6 +142,60 @@ function Mockup({ type, color }) {
         <circle cx="297" cy="166" r="20" fill="none" stroke="#3B82F6" strokeWidth="6" strokeDasharray="0 126" opacity="0.5">
           <animate attributeName="stroke-dasharray" values="0 126;60 66;40 86" dur="3s" begin="0.3s" repeatCount="indefinite" />
         </circle>
+      </>}
+
+      {type === 'qr' && <>
+        {/* QR code panel */}
+        <rect x="20" y="44" width="130" height="130" rx="8" fill="#F8FAFC" />
+        {[[30, 54], [118, 54], [30, 142]].map(([x, y], i) => (
+          <g key={i}>
+            <rect x={x} y={y} width="22" height="22" rx="2" fill="none" stroke="#0F172A" strokeWidth="4" />
+            <rect x={x + 7} y={y + 7} width="8" height="8" fill="#0F172A" />
+          </g>
+        ))}
+        {[[60, 58], [72, 58], [90, 62], [102, 70], [60, 76], [80, 80], [96, 84], [110, 90],
+          [64, 94], [76, 98], [90, 104], [104, 110], [58, 112], [72, 118], [88, 124], [102, 130],
+          [64, 134], [80, 140], [96, 146], [110, 150], [118, 108], [126, 120], [112, 132], [126, 96]].map(([x, y], i) => (
+          <rect key={i} x={x} y={y} width="7" height="7" fill="#0F172A" opacity="0.9">
+            <animate attributeName="opacity" values="0.9;0.35;0.9" dur={`${2 + (i % 5) * 0.4}s`} repeatCount="indefinite" />
+          </rect>
+        ))}
+        {/* Scanning beam */}
+        <rect x="20" y="44" width="130" height="14" fill={color} opacity="0.18" rx="2">
+          <animate attributeName="y" values="44;160;44" dur="3s" repeatCount="indefinite" />
+        </rect>
+        <rect x="20" y="44" width="130" height="3" fill={color} opacity="0.9" rx="1.5">
+          <animate attributeName="y" values="44;171;44" dur="3s" repeatCount="indefinite" />
+        </rect>
+        {/* Asset details panel */}
+        <rect x="165" y="44" width="225" height="76" rx="6" fill={panelBg} />
+        <rect x="177" y="56" width="90" height="9" rx="2" fill={color} opacity="0.85">
+          <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite" />
+        </rect>
+        {[72, 86, 100].map((y, i) => (
+          <g key={y}>
+            <rect x="177" y={y} width="56" height="6" rx="2" fill="#1E293B" />
+            <rect x="241" y={y} width={130 - i * 24} height="6" rx="2" fill="#334155">
+              <animate attributeName="width" values={`40;${130 - i * 24};${130 - i * 24}`} dur="1.2s" begin={`${0.3 + i * 0.25}s`} fill="freeze" />
+            </rect>
+          </g>
+        ))}
+        {/* Mini network map */}
+        <rect x="165" y="130" width="225" height="80" rx="6" fill={panelBg} />
+        {[145, 165, 185].map(y => (
+          <line key={y} x1="172" y1={y} x2="383" y2={y} stroke="#1E293B" strokeWidth="0.5" />
+        ))}
+        {[[210, 160], [260, 175], [310, 150], [240, 195], [350, 185], [290, 165]].map(([x, y], i) => (
+          <g key={i}>
+            <circle cx={x} cy={y} r="3.5" fill={color} opacity="0">
+              <animate attributeName="opacity" values="0;1;0.5;1" dur="2.5s" begin={`${i * 0.3}s`} repeatCount="indefinite" />
+            </circle>
+            <circle cx={x} cy={y} r="9" fill="none" stroke={color} strokeWidth="1" opacity="0">
+              <animate attributeName="opacity" values="0;0.4;0" dur="2.5s" begin={`${i * 0.3}s`} repeatCount="indefinite" />
+              <animate attributeName="r" values="3;13;13" dur="2.5s" begin={`${i * 0.3}s`} repeatCount="indefinite" />
+            </circle>
+          </g>
+        ))}
       </>}
 
       {type === 'terminal' && <>
@@ -289,23 +343,126 @@ function ProjectModal({ project, onClose }) {
   )
 }
 
+/* ── Flagship Spotlight ── */
+function FeaturedSpotlight({ project, onSelect }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-40px' }}
+      transition={{ duration: 0.6 }}
+      className="mb-14"
+    >
+      <div className="rounded-3xl p-[1.5px] animate-gradient-x shadow-2xl shadow-cyan-500/10"
+        style={{ background: 'linear-gradient(110deg, #06B6D4, #8B5CF6, #0EA5E9, #06B6D4)' }}>
+        <div className="rounded-3xl bg-[#030712] overflow-hidden lg:grid lg:grid-cols-2">
+
+          <div className="relative flex items-center bg-[#030712]">
+            <Mockup type={project.mockupType} color={project.color} />
+          </div>
+
+          <div className="p-6 lg:p-8 flex flex-col">
+            <div className="inline-flex items-center gap-1.5 self-start px-3 py-1 rounded-full mb-4
+              bg-gradient-to-r from-cyan-500/15 to-violet-500/15 border border-cyan-500/30
+              text-cyan-300 text-xs font-semibold tracking-wide uppercase">
+              <Sparkles size={13} /> Flagship Project
+            </div>
+
+            <h3 className="text-2xl lg:text-3xl font-bold font-['Space_Grotesk'] text-slate-100 mb-3">
+              {project.title}
+            </h3>
+            <p className="text-slate-400 mb-5">{project.description}</p>
+
+            <div className="flex flex-wrap gap-2 mb-5">
+              {project.tech.map(t => (
+                <span key={t} className="px-2.5 py-1 text-xs rounded-md bg-cyan-500/10
+                  text-cyan-300 border border-cyan-500/20">{t}</span>
+              ))}
+            </div>
+
+            <ul className="grid sm:grid-cols-2 gap-x-4 gap-y-2 mb-6">
+              {project.features.map((f, i) => (
+                <motion.li key={i}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.06 }}
+                  className="text-slate-300 text-sm flex items-start gap-2">
+                  <span className="text-cyan-400 mt-0.5">&#10003;</span> {f}
+                </motion.li>
+              ))}
+            </ul>
+
+            <div className="flex flex-wrap gap-3 mt-auto">
+              <a href={project.live} target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600
+                  text-white text-sm font-semibold hover:shadow-lg hover:shadow-cyan-500/25
+                  transition-all hover:-translate-y-0.5">
+                <ExternalLink size={16} /> Open Live App
+              </a>
+              <button onClick={() => onSelect(project)}
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/15
+                  text-slate-300 text-sm hover:bg-white/5 hover:border-white/30 transition-all cursor-pointer">
+                <Eye size={16} /> View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  )
+}
+
 /* ── Projects Section ── */
 export default function Projects() {
   const [selected, setSelected] = useState(null)
+  const [filter, setFilter] = useState('All')
+
+  const featured = projects.find(p => p.featured)
+  const visible = filter === 'All'
+    ? projects.filter(p => !p.featured)
+    : projects.filter(p => p.category === filter)
+  const countFor = c => (c === 'All' ? projects.length : projects.filter(p => p.category === c).length)
 
   return (
     <section id="projects" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <SectionHeading title="Featured Projects" subtitle="Dashboards, automation tools, and geospatial applications" />
+        <SectionHeading title="Featured Projects" subtitle="Live products, dashboards, automation tools, and geospatial applications" />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((p, i) => (
+        {featured && filter === 'All' && (
+          <FeaturedSpotlight project={featured} onSelect={setSelected} />
+        )}
+
+        {/* Category filter */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          {categories.map(c => (
+            <button key={c} onClick={() => setFilter(c)}
+              className={`relative px-4 py-1.5 rounded-full text-sm border transition-all cursor-pointer
+                ${filter === c
+                  ? 'text-white border-cyan-400/40'
+                  : 'text-slate-400 border-white/10 hover:border-white/25 hover:text-slate-200'}`}>
+              {filter === c && (
+                <motion.div layoutId="filterPill"
+                  className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500/25 to-violet-500/25"
+                  transition={{ type: 'spring', stiffness: 400, damping: 32 }} />
+              )}
+              <span className="relative z-10">
+                {c} <span className="text-xs opacity-60">({countFor(c)})</span>
+              </span>
+            </button>
+          ))}
+        </div>
+
+        <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <AnimatePresence mode="popLayout">
+          {visible.map((p, i) => (
             <motion.div
               key={p.title}
+              layout
               initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ delay: i * 0.06, duration: 0.5 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.92 }}
+              transition={{ delay: i * 0.04, duration: 0.45 }}
               whileHover={{ y: -6 }}
               className="group"
             >
@@ -327,16 +484,14 @@ export default function Projects() {
                   <Mockup type={p.mockupType} color={p.color} />
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
-                    <motion.button
+                    <button
                       onClick={() => setSelected(p)}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
                       className="px-4 py-2 rounded-lg bg-white/10 backdrop-blur border border-white/20
                         text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-300
                         hover:bg-white/20 cursor-pointer"
                     >
                       View Details
-                    </motion.button>
+                    </button>
                   </div>
                 </div>
 
@@ -384,7 +539,8 @@ export default function Projects() {
               </div>
             </motion.div>
           ))}
-        </div>
+          </AnimatePresence>
+        </motion.div>
 
         <AnimatePresence>
           {selected && <ProjectModal project={selected} onClose={() => setSelected(null)} />}

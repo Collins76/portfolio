@@ -5,25 +5,25 @@ export const experience = [
     location: 'Lagos, Nigeria',
     period: 'Nov 2017 — Present',
     bullets: [
-      'Manage geospatial data for a 3,800+ km electricity distribution network serving 1M+ customers across Lagos',
-      'Engineered Python automation (ArcPy, GeoPandas), reducing manual GIS workflows by 35%',
-      'Deployed Esri Survey123, improving field capture speed by 45% and eliminating paper-based errors',
-      'Designed ArcGIS Dashboards for real-time outage monitoring, enabling 40% faster incident response',
-      'Built ETL pipelines cutting manual data processing by 67%',
-      'Developed IE Asset Dashboard monitoring 20,641+ distribution assets across 23 geospatial layers',
-      'Created Power BI dashboards for transformer vandalization tracking and 8,513+ upriser inspections',
+      'Govern the geospatial data backbone of a 3,800+ km electricity distribution network serving 1M+ customers across Lagos',
+      'Engineered Python automation (ArcPy, GeoPandas) cutting manual GIS workflows by 35%',
+      'Architected the full-stack rebuild of the IE Asset Dashboard — a single source of truth for 20,641+ assets across 23 data layers',
+      'Built spatial ETL pipelines unifying SCADA, billing, and field-capture data, eliminating 67% of manual processing',
+      'Launched real-time ArcGIS outage dashboards cutting mean incident-response time by 40%',
+      'Digitized field capture with Survey123, accelerating collection by 45% across 8,513+ upriser inspections',
+      'Delivered Power BI analytics for vandalization tracking plus a GIS KPIs dashboard for leadership visibility',
     ],
   },
   {
-    title: 'GIS / Data Engineer Manager',
+    title: 'GIS / Data Engineering Manager',
     company: 'PoloSoft Technologies',
     location: 'Lagos, Nigeria',
     period: 'Sep 2016 — Oct 2017',
     bullets: [
-      'Led team of 8 GIS professionals across utility and infrastructure projects',
-      'Architected BI integrations with Tableau and Power BI for spatial data visualization',
-      'Designed cloud-based ETL pipelines for large-scale geospatial processing',
-      'Developed training programs upskilling team in GIS technologies and database management',
+      'Directed a team of 8 GIS professionals across concurrent Agile project streams in West Africa',
+      'Championed BI adoption with Tableau and Power BI integrations for faster client decisions',
+      'Designed cloud-based ETL pipelines scaling large-volume geospatial processing and warehousing',
+      'Built team capability through structured technical training programs, raising delivery quality',
     ],
   },
   {
@@ -32,9 +32,9 @@ export const experience = [
     location: 'Lagos, Nigeria',
     period: 'Oct 2012 — Aug 2016',
     bullets: [
-      'Managed PostgreSQL/PostGIS migrations maintaining 99.9% uptime across production',
-      'Optimized spatial SQL queries with 50% performance improvement',
-      'Delivered dashboards and spatial analytics for oil & gas, NGO, and infrastructure clients',
+      'Migrated and administered enterprise PostgreSQL/PostGIS databases, sustaining 99.9% uptime in production',
+      'Optimized spatial SQL queries and indexing strategies, boosting database performance by 50%',
+      'Turned raw spatial data into decision-ready dashboards and analytics for oil & gas, NGO, and infrastructure clients',
     ],
   },
   {
@@ -43,8 +43,9 @@ export const experience = [
     location: 'Nigeria',
     period: 'Jun 2010 — Aug 2012',
     bullets: [
-      'Conducted field geological surveys and GPS-based data collection for hydrocarbon exploration',
-      'Integrated geological data with GIS platforms for spatial analysis of prospective zones',
+      'Led field geological surveys and GPS-based data collection underpinning resource estimation and prospect appraisal',
+      'Produced structural and stratigraphic maps guiding drilling-target selection and reserve evaluation',
+      'Integrated field data into ArcGIS, translating findings into actionable datasets for exploration and drilling teams',
     ],
   },
   {
@@ -54,8 +55,8 @@ export const experience = [
     period: 'Jan 2005 — May 2010',
     bullets: [
       'Built ETL pipelines for spatial data ingestion, transformation, and quality assurance',
-      'Performed network and proximity analysis for infrastructure planning',
-      'Managed GPS/GNSS field data collection campaigns for large-scale mapping',
+      'Performed network, proximity, and spatial-modeling analyses informing infrastructure planning',
+      'Managed GPS/GNSS field campaigns and post-processing for large-scale mapping',
     ],
   },
 ]

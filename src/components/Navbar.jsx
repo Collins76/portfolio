@@ -64,7 +64,7 @@ export default function Navbar({ activeSection = '' }) {
               )}
             </a>
           ))}
-          <a href="/cv2.pdf" target="_blank" rel="noopener noreferrer"
+          <a href="/Collins_Anyanwu_CV_2026.pdf" target="_blank" rel="noopener noreferrer"
             className="text-sm px-4 py-2 rounded-lg border border-cyan-500/40
               text-cyan-400 hover:bg-cyan-500/10 transition-all">
             Resume
@@ -96,7 +96,7 @@ export default function Navbar({ activeSection = '' }) {
                   {l.label}
                 </a>
               ))}
-              <a href="/cv2.pdf" target="_blank" rel="noopener noreferrer"
+              <a href="/Collins_Anyanwu_CV_2026.pdf" target="_blank" rel="noopener noreferrer"
                 className="text-cyan-400 border border-cyan-500/40 rounded-lg px-4 py-2 text-center
                   hover:bg-cyan-500/10 transition-all">
                 Resume

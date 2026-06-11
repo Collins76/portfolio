@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
-import { Globe, Code2, Database, Cloud, BarChart3 } from 'lucide-react'
+import { Globe, Code2, Database, Cloud, BarChart3, Brain } from 'lucide-react'
 import SectionHeading from './ui/SectionHeading'
 import { skillGroups } from '../data/skills'
 
-const iconMap = { Globe, Code2, Database, Cloud, BarChart3 }
+const iconMap = { Globe, Code2, Database, Cloud, BarChart3, Brain }
 
 export default function Skills() {
   return (

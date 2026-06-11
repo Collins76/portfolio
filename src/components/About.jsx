@@ -19,13 +19,15 @@ export default function About() {
 
         <ScrollReveal>
           <p className="text-slate-300 text-lg leading-relaxed max-w-3xl mx-auto text-center mb-16">
-            Results-driven Geospatial Data Manager with 19+ years of progressive experience in
-            GIS data engineering, spatial analysis, and geospatial database management across
-            utility, oil &amp; gas, and technology sectors. Currently leading GIS operations at{' '}
+            Geospatial &amp; AI Data Analyst and Database &amp; BI Specialist with 19+ years of
+            progressive experience in GIS data engineering, spatial analysis, and geospatial
+            database management across utility, oil &amp; gas, and technology sectors. Currently
+            leading GIS operations at{' '}
             <span className="text-cyan-400 font-medium">Ikeja Electric Plc</span>, managing a
             3,800+ km electricity distribution network serving 1M+ customers across Lagos. Expert
-            in ArcGIS Enterprise, QGIS, PostgreSQL/PostGIS, Python automation, and modern
-            full-stack web development with React, Next.js, TypeScript, and Supabase.
+            in ArcGIS Enterprise, QGIS, PostgreSQL/PostGIS, Power BI, Tableau, and Python
+            automation — backed by certified machine-learning and deep-learning training — with
+            modern full-stack delivery in React, Next.js, TypeScript, and Supabase.
           </p>
         </ScrollReveal>
 

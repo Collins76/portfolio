@@ -4,8 +4,8 @@ export const skillGroups = [
     icon: 'Globe',
     color: '#06B6D4',
     skills: [
-      'ArcGIS Enterprise', 'ArcGIS Pro', 'ArcGIS Online', 'QGIS',
-      'Survey123', 'ArcGIS Dashboards', 'Google Earth Engine',
+      'ArcGIS Enterprise', 'ArcGIS Pro', 'ArcGIS Online', 'ArcSDE', 'QGIS',
+      'Survey123', 'ArcGIS Dashboards', 'FME', 'Google Earth Engine',
       'LiDAR', 'Remote Sensing', 'GPS/GNSS',
     ],
   },
@@ -32,8 +32,17 @@ export const skillGroups = [
     icon: 'Cloud',
     color: '#10B981',
     skills: [
-      'React', 'Next.js', 'Tailwind CSS', 'Vercel',
+      'React', 'Next.js', 'Node.js', 'Tailwind CSS', 'Vercel',
       'AWS (S3, EC2, RDS)', 'Git/GitHub', 'Docker',
+    ],
+  },
+  {
+    title: 'Data Science & AI',
+    icon: 'Brain',
+    color: '#EC4899',
+    skills: [
+      'Machine Learning', 'Deep Learning', 'Data Analysis',
+      'Pandas', 'Predictive Modeling',
     ],
   },
   {

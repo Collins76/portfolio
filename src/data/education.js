@@ -1,11 +1,11 @@
 export const education = [
   {
-    degree: 'Master of Science, Geographic Information Systems',
+    degree: 'Masters, Geographic Information Systems',
     school: 'University of Lagos',
     location: 'Lagos, Nigeria',
   },
   {
-    degree: 'Bachelor of Technology, Geology & Earth Sciences',
+    degree: 'Bachelor of Technology (B.Tech), Geology',
     school: 'Federal University of Technology, Owerri',
     location: 'Owerri, Nigeria',
   },
